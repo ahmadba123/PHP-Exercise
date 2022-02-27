@@ -1,17 +1,18 @@
 <?php
 function armstrong_number($num) {
-  $sl = strlen($num);
-  $sum = 0;
-  $num = (string)$num;
-  for ($i = 0; $i < $sl; $i++) {
-  }
-  if ((string)$sum == (string)$num) {
-    return "True";
+$rem=0;
+$total=0;
+$x=$num;
+while($x !=0){
+  $rem =$x % 10;
+  $total = $total + $rem * $rem * $rem;
+  $x=$x / 10;
+}
+  if ($total == $x) {
+    echo "True \n";
   } else {
-    return "False";
+    echo "False\n";
   }
 }
-echo "Is 152 Armstrong number? ".armstrong_number(10);
-echo "\nIs 21 Armstrong number? ".armstrong_number(21);
-echo "\nIs 4587 Armstrong number? ".armstrong_number(4587);"\n";
+armstrong_number (10)
 ?>
